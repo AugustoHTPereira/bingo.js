@@ -4,78 +4,65 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-body {
+.content {
   height: 100vh;
-}
-
-.content-game {
-  width: 100%;
-}
-
-.manage {
-  margin-top: 15px;
-  padding: 0 5px;
-  text-align: center;
-}
-
-.entry {
-  margin: 15px 0;
-}
-
-.last {
-  min-height: 250px;
-  background-color: #eee;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.inline {
-  display: flex;
-}
-
-.main-table {
-  border-spacing: 0;
-  flex: 1;
-  width: 100%;
-}
-
-.main-table th {
-  background-color: #ccc;
-  height: 50px;
+  width: 100vw;
+  background-color: azure;
   color: #111;
-  font-size: 18pt;
-  width: 20%;
-}
-
-.main-table td {
-  height: 50px;
-  text-align: center;
-  font-size: large;
-  font-weight: bold;
-  font-size: 32pt;
-  border: 1px solid #bbb;
-}
-
-.table-last {
+  font-family: monospace;
   display: flex;
-  align-items: flex-end;
+}
+
+.right {
+  flex: 1;
+  background-color: red;
+}
+
+.left {
+  padding: 5px;
+}
+
+.input {
+  display: flex;
+  position: relative;
+  height: 50px;
+}
+
+input[type="text"] {
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #000;
+  height: calc(100% - 2px);
+  width: 150px;
+  text-align: center;
+  font-size: 16pt;
+}
+
+.insert {
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #000;
+  background-color: #7d95c9;
+  color: white;
+  width: 50px;
+  height: 100%;
+  font-size: 14pt;
+}
+
+.remove {
+  border-radius: 50%;
+  border: 1px solid red;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255, 224, 224);
+  color: red;
+}
+
+.alldigits #alldigits {
   width: 100%;
+  text-align: center;
+}
+
+.alldigits-title {
+  display: flex;
   justify-content: space-around;
-}
-
-.body {
-  width: 100%;
-}
-
-.last-number {
-  font-size: 52pt;
-  font-weight: bold;
-}
-
-.last-column {
-  font-size: 32pt;
-  font-weight: bold;
-  color: rgb(53, 53, 53);
+  margin-top: 15px;
 }

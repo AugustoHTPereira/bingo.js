@@ -8,49 +8,27 @@
     <title>Bingo</title>
   </head>
   <body onload="init()">
-    <div class="content-game inline">
-      <div class="manage">
-        <div class="inline entry">
-          <input
-            onkeyup="set(event)"
-            type="text"
-            id="input-number"
-            placeholder="Insira o número"
-          />
-          <button onclick="set()">Ok</button>
+    <div class="content">
+      <div class="left">
+        <div class="input">
+          <input onkeyup="push(event)" type="text" name="input" id="input" />
+          <button onclick="push()" class="insert">></button>
         </div>
-        <div class="last">
-          <h3>ÚLTIMA PEDRA</h3>
-          <table class="table-last">
-            <tr>
-              <th>COLUNA</th>
-              <th>NÚMERO</th>
-            </tr>
-            <tr>
-              <td class="last-column" id="last-column">B</td>
-              <td class="last-number" id="last-number">01</td>
-            </tr>
-          </table>
-        </div>
-        <div class="all">
-          <ul id="all"></ul>
+        <div class="alldigits">
+          <div class="alldigits-title">
+            <p>Coluna</p>
+            |
+            <p>Número</p>
+            |
+            <p>Remover</p>
+          </div>
+          <table id="alldigits"></table>
         </div>
       </div>
-
-      <div class="body">
-        <table class="main-table" id="main-table">
-          <tr>
-            <th>B</th>
-            <th>I</th>
-            <th>N</th>
-            <th>G</th>
-            <th>O</th>
-          </tr>
-        </table>
+      <div class="right">
+        <table id="mainTable"></table>
       </div>
     </div>
-
-    <div class="footer"></div>
   </body>
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </html>
