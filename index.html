@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bingo</title>
+  </head>
+  <body onload="init()">
+    <div class="content-game inline">
+      <div class="manage">
+        <div class="inline entry">
+          <input
+            onkeyup="set(event)"
+            type="text"
+            id="input-number"
+            placeholder="Insira o número"
+          />
+          <button onclick="set()">Ok</button>
+        </div>
+        <div class="last">
+          <h3>ÚLTIMA PEDRA</h3>
+          <table class="table-last">
+            <tr>
+              <th>COLUNA</th>
+              <th>NÚMERO</th>
+            </tr>
+            <tr>
+              <td class="last-column" id="last-column">B</td>
+              <td class="last-number" id="last-number">01</td>
+            </tr>
+          </table>
+        </div>
+        <div class="all">
+          <ul id="all"></ul>
+        </div>
+      </div>
+
+      <div class="body">
+        <table class="main-table" id="main-table">
+          <tr>
+            <th>B</th>
+            <th>I</th>
+            <th>N</th>
+            <th>G</th>
+            <th>O</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer"></div>
+  </body>
+  <script src="index.js"></script>
+</html>
