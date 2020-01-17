@@ -13,7 +13,9 @@ push = event => {
   if (event !== undefined && event.keyCode != 13) return;
   var number = validateNumber(this.input.value);
   if (number === false) return;
-  if (number < 10) number = "0" + number;
+  if (number < 10 && !number.startsWith("0")) number = "0" + number;
+  if (number.length > 2)
+    number = number.substr(number.length - 2, number.length);
 
   this.last = {
     column: this.mapColumn(number),
@@ -21,7 +23,6 @@ push = event => {
   };
 
   this.numbers.push(this.last);
-
   this.render();
   console.log("___________________________________________________");
 };
