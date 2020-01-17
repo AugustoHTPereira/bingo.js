@@ -1,7 +1,7 @@
 init = () => {
   this.numbers = [];
   this.alldigits = document.getElementById("alldigits");
-  this.mainTable = docmuent.getElementById("mainTable");
+  this.mainTable = document.getElementById("mainTable");
   this.input = document.getElementById("input");
   this.last = {
     column: "",
@@ -21,6 +21,8 @@ push = event => {
     column: this.mapColumn(number),
     number: number
   };
+
+  if (this.arrayHas(this.numbers, this.last)) return;
 
   this.numbers.push(this.last);
   this.render();
@@ -94,3 +96,9 @@ appendManagerTable = el => {
 };
 
 appendMainTable = el => {};
+
+arrayHas = (arr, key) => {
+  for (let i = 0; i < arr.length; i++)
+    if (arr[i].column == key.column && arr[i].number == key.number) return true;
+  return false;
+};
